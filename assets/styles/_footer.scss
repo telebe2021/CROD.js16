@@ -1,0 +1,19 @@
+footer{
+    width: 100%;
+    background-color: #f9faff;
+    padding-top: 100px;
+    .footcont{
+        width: 100%;
+        border-top: 1px solid gray;
+        text-align: center;
+        padding: 100px 0;
+        color: gray;
+        letter-spacing: 1px;
+        a{
+            letter-spacing: 1px;
+            &:hover{
+                color: rgb(0, 0, 175);
+            }
+        }
+    }
+}

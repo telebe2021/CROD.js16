@@ -1,0 +1,107 @@
+.section1 {
+    background-image: url('https://preview.colorlib.com/theme/drimo/drimo/img/banner/server-banner.jpg.webp');
+    padding: 200px 0;
+    .sect11 {
+        margin: 60px auto;
+        clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 60% 75%, 55% 100%, 50% 75%, 0% 75%);
+        width: 40%;
+        height: 100px;
+        background-color: #fc6428;
+        padding: 20px 0;
+        display: flex;
+        justify-content: center;
+        color: white;
+    }
+
+    .sect12 {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+
+        .metn {
+            width: 60%;
+
+            h1,
+            h2,
+            h4,
+            p {
+                font-weight: 400;
+                margin-bottom: 30px;
+                color: white;
+            }
+
+            h1 {
+                font-size: 45px;
+            }
+
+            h2 {
+                font-size: 40px;
+            }
+
+            h4 {
+                width: 50%;
+                display: flex;
+                flex-wrap: wrap;
+                margin-bottom: 75px;
+                gap: 10px;
+
+                a {
+                    width: calc(50% - 10px);
+                    color: white;
+                }
+            }
+
+            .a {
+                color: white;
+                background-color: #fc6428;
+                padding: 15px;
+                transition: 0.5s ease;
+
+                &:hover {
+                    background-color: #e64100;
+                    ;
+                }
+            }
+        }
+
+        .img {
+            width: 40%;
+            margin-top: -50px;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) and (min-width: 480px) {
+    .section1{
+        .sect12{
+            flex-direction: column;
+            .metn, .img{
+                width: 100%;
+                margin: 0;
+                h4{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .section1{
+        .sect12{
+            .metn{
+                h4{
+                    width: 100%;
+                    a{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

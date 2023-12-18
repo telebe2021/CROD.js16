@@ -1,0 +1,114 @@
+.section4 {
+    width: 100%;
+    padding: 100px 0;
+
+    .sect4con {
+        width: 100%;
+
+        .top {
+            width: 50%;
+            margin: auto;
+            text-align: center;
+            margin-bottom: 100px;
+
+            h2 {
+                font-weight: 300;
+                position: relative;
+                font-size: 35px;
+                margin-bottom: 40px;
+                padding: 20px;
+
+                &::before {
+                    content: "";
+                    width: 60px;
+                    height: 2px;
+                    background: #424242;
+                    position: absolute;
+                    left: 50%;
+                    bottom: 0px;
+                    transform: translateX(-50%);
+                }
+            }
+
+            p {
+                font-size: 16px;
+                line-height: 25px;
+            }
+        }
+
+        .cards {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            .card {
+                flex: 1 1 calc(33% - 20px);
+                max-width: calc(33% - 10px);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid gray;
+                gap: 40px;
+                .img{
+                    width: 100%;
+                    overflow: hidden;
+                    img{
+                        transition: all 0.5s ease;
+                        width: 100%;
+                        height: auto;
+                    }
+                    &:hover img{
+                        transform: scale(1.05);
+                    }
+                }
+                .text{
+                    width: 100%;
+                    min-height: 150px;
+                    padding: 10px;
+                    a{
+                        color: black;
+                        font-size: 24px;
+                    }
+                    p{
+                        font-size: 18px;
+                        margin-top: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) and (min-width: 480px) {
+    .section4 {
+        .sect4con {
+            .top {
+                width: 100%;
+            }
+
+            .cards {
+                .card {
+                    flex: 1 1 calc(50% - 20px);
+                    max-width: calc(50% - 10px);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .section4 {
+        .sect4con {
+            .top{
+                width: 100%;
+            }
+            .cards {
+                .card {
+                    flex: 1 1 calc(100% - 20px);
+                    max-width: calc(100% - 10px);
+                }
+            }
+        }
+    }
+}

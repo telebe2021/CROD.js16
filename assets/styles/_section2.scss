@@ -1,0 +1,158 @@
+.section2 {
+    width: 100%;
+    padding: 100px 0;
+
+    .sect2con {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .top {
+            width: 50%;
+            margin: auto;
+            text-align: center;
+            h2 {
+                font-weight: 300;
+                position: relative;
+                font-size: 35px;
+                margin-bottom: 40px;
+                padding: 20px;
+
+                &::before {
+                    content: "";
+                    width: 60px;
+                    height: 2px;
+                    background: #424242;
+                    position: absolute;
+                    left: 50%;
+                    bottom: 0px;
+                    transform: translateX(-50%);
+                }
+            }
+
+            p {
+                font-size: 16px;
+                line-height: 25px;
+            }
+        }
+
+        #search{
+            margin: 75px 0;
+            width: 200px;
+            height: 30px;
+            padding: 5px;
+        }
+
+        .card {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+
+            div {
+                flex: 1 1 calc(25% - 20px);
+                max-width: calc(25% - 10px);
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 20px;
+                position: relative;
+                .bi-heart, .bi-heart-fill{
+                    position: absolute;
+                    z-index: 10;
+                    color: red;
+                    top: 10px;
+                    right: 20px;
+                    cursor: pointer;
+                    transition: all 0.5s ease;
+                    &:hover{
+                        transform: scale(1.2);
+                    }
+                }
+                img{
+                    width: 25%;
+                    height: auto;
+                    border-radius: 9999999px;
+                }
+                span{
+                    width: 80%;
+                    display: flex;
+                    justify-content: space-between;
+                    .delete, .update{
+                        width: 28%;
+                        height: 25px;
+                        border: none;
+                        color: white;
+                    }
+                    .details{
+                        width: 28%;
+                        height: 25px;
+                        button{
+                            width: 100%;
+                            height: 100%;
+                            border: none;
+                            background-color: blue;
+                            color: white;
+                        }
+                    }
+                    .delete{
+                        background-color: red;
+                    }
+                    .update{
+                        background-color: green;
+                    }
+                }
+            }
+        }
+        .load{
+            width: 200px;
+            height: 50px;
+            margin: 50px 0 0 0;
+            border: none;
+            background-color: $blue;
+            color: white;
+            cursor: grab;
+            &:active{
+                background-color: red;
+                cursor: grabbing;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) and (min-width: 480px) {
+    .section2 {
+        .sect2con {
+            .top {
+                width: 100%;
+            }
+
+            .card {
+                div {
+                    flex: 1 1 calc(50% - 20px);
+                    max-width: calc(50% - 10px);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .section2 {
+        .sect2con {
+            .top{
+                width: 100%;
+            }
+            .card {
+                div {
+                    flex: 1 1 calc(100% - 20px);
+                    max-width: calc(100% - 10px);
+                }
+            }
+        }
+    }
+}

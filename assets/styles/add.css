@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.container {
+    margin: auto;
+    padding: 0 32px;
+    max-width: 1300px;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    width: 100%;
+    background-color: white;
+    transition: all 0.5s ease;
+}
+
+nav .navcon {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .navcon i {
+    display: none;
+    font-size: 24px;
+}
+
+nav .navcon ul {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+nav .navcon ul a {
+    color: black;
+    transition: 0.2s ease;
+}
+
+nav .navcon ul a:hover {
+    color: rgb(125, 185, 232);
+}
+
+@media screen and (max-width: 992px) {
+    nav .navcon ul {
+        display: none;
+    }
+
+    nav .navcon i {
+        display: block;
+    }
+}
+
+/* -------Add--------- */
+
+.add {
+    width: 100%;
+    padding: 125px 0;
+    background-color: #7db9e8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.addcon {
+    width: 100%;
+}
+
+form {
+    display: flex;
+    width: 50%;
+    margin-left: 25%;
+    gap: 20px;
+    flex-direction: column;
+    padding: 20px 100px;
+    border: 2px solid rgb(235, 235, 235);
+}
+
+
+.img {
+    width: 60px;
+    height: 60px;
+    border-radius: 999px;
+    border: 1px solid black;
+}
+
+.img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 999999px;
+}
+
+
+#submit {
+    background-color: #fc5a1a;
+    padding: 6px 6px;
+    border: none;
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+    border-radius: 12px;
+}

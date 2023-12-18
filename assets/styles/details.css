@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.container {
+    margin: auto;
+    padding: 0 32px;
+    max-width: 1300px;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    width: 100%;
+    background-color: white;
+    transition: all 0.5s ease;
+}
+
+nav .navcon {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .navcon i {
+    display: none;
+    font-size: 24px;
+}
+
+nav .navcon ul {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+nav .navcon ul a {
+    color: black;
+    transition: 0.2s ease;
+}
+
+nav .navcon ul a:hover {
+    color: rgb(125, 185, 232);
+}
+
+@media screen and (max-width: 992px) {
+    nav .navcon ul {
+        display: none;
+    }
+
+    nav .navcon i {
+        display: block;
+    }
+}
+
+/*--------Section---------*/
+
+.section2 {
+    width: 100%;
+    padding: 100px 0;
+    min-height: 500px;
+}
+
+.section2 .sec2cont {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section2 .sect2con .card {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.section2 .sect2con .card div {
+    flex: 1 1 calc(25% - 20px);
+    max-width: calc(25% - 10px);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.section2 .sect2con .card div img {
+    width: 25%;
+    height: auto;
+    border-radius: 9999999px;
+}
+
+.section2 .sect2con .card div span {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.section2 .sect2con .card div span .delete,
+.section2 .sect2con .card div span .update {
+    width: 28%;
+    height: 25px;
+    border: none;
+    color: white;
+}
+
+.section2 .sect2con .card div span .details {
+    width: 28%;
+    height: 25px;
+}
+
+.section2 .sect2con .card div span .details button {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: blue;
+    color: white;
+}
+
+.section2 .sect2con .card div span .delete {
+    background-color: red;
+}
+
+.section2 .sect2con .card div span .update {
+    background-color: green;
+}
+
+.section2 .sect2con .load:active {
+    background-color: red;
+    cursor: grabbing;
+}
+
+@media screen and (max-width: 992px) and (min-width: 480px) {
+    .section2 .sect2con .card div {
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 10px);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .section2 .sect2con .card div {
+        flex: 1 1 calc(100% - 20px);
+        max-width: calc(100% - 10px);
+    }
+}
+
+
+/* ---------Footer--------*/
+
+footer {
+    width: 100%;
+    background-color: #f9faff;
+    padding-top: 100px;
+}
+
+footer .footcont {
+    width: 100%;
+    border-top: 1px solid gray;
+    text-align: center;
+    padding: 100px 0;
+    color: gray;
+    letter-spacing: 1px;
+}
+
+footer .footcont a {
+    letter-spacing: 1px;
+}
+
+footer .footcont a:hover {
+    color: rgb(0, 0, 175);
+}

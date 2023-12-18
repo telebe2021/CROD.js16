@@ -1,0 +1,110 @@
+.section3{
+    width: 100%;
+    background-color: $blue;
+    .sect3con{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: white;
+        .medoza {
+            width: 50%;
+            margin: 100px auto;
+            text-align: center;
+            h2 {
+                font-weight: 300;
+                position: relative;
+                font-size: 35px;
+                margin-bottom: 40px;
+                padding: 20px;
+
+                &::before {
+                    content: "";
+                    width: 60px;
+                    height: 2px;
+                    background: white;
+                    position: absolute;
+                    left: 50%;
+                    bottom: 0px;
+                    transform: translateX(-50%);
+                }
+            }
+
+            p {
+                font-size: 16px;
+                line-height: 25px;
+            }
+        }
+        .bot{
+            width: 100%;
+            margin-bottom: 50px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            .mars{
+                flex: 1 1 calc(25% - 20px);
+                max-width: calc(25% - 20px);
+                display: flex;
+                justify-content: space-evenly;
+                .icon{
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 999999px;
+                    display: flex;
+                    border: 6px solid rgba(125, 185, 232, 0.5);;
+                    justify-content: center;
+                    align-items: center;
+                    color: $blue;
+                    background-color: white;
+                    font-size: 35px;
+                }
+                .text{
+                    height: 60px;
+                    width: calc(100% - 100px);
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    h4{
+                        font-size: 24px;
+                    }
+                    p{
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) and (min-width: 480px) {
+    .section3 {
+        .sect3con {
+            .medoza {
+                width: 100%;
+            }
+
+            .bot {
+                .mars {
+                    flex: 1 1 calc(50% - 20px);
+                    max-width: calc(50% - 10px);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .section3 {
+        .sect3con {
+            .medoza{
+                width: 100%;
+            }
+            .bot {
+                .mars {
+                    flex: 1 1 calc(100% - 20px);
+                    max-width: calc(100% - 10px);
+                }
+            }
+        }
+    }
+}

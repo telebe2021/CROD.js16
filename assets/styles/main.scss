@@ -1,0 +1,84 @@
+$blue: rgb(125, 185, 232);
+$red :  rgb(255,0,0);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.container {
+    margin: auto;
+    padding: 0 32px;
+    max-width: 1300px;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+@import 'nav';
+@import 'section1';
+@import 'section2';
+@import 'section3';
+@import 'section4';
+@import 'footer';
+@import 'update';
+
+#add {
+    width: 50px;
+    height: 50px;
+    border-radius: 99999999px;
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    background-color: $red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 34px;
+    transition: all 0.5s ease;
+
+    &:hover {
+        width: 100px;
+        border-radius: 50px;
+
+        &::after {
+            content: "Add";
+            font-size: 16px;
+            margin-left: 10px;
+        }
+    }
+}
+#fav {
+    width: 50px;
+    height: 50px;
+    border-radius: 99999999px;
+    position: fixed;
+    right: 40px;
+    bottom: 100px;
+    background-color: $red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 25px;
+    padding-top: 5px;
+    transition: all 0.5s ease;
+
+    &:hover {
+        width: 150px;
+        border-radius: 50px;
+
+        &::after {
+            content: "Favorites";
+            font-size: 16px;
+            margin-left: 10px;
+        }
+    }
+}
